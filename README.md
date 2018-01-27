@@ -27,7 +27,7 @@ Higgs is a tiny package to help you with a small project that doesn't need a ful
 
 ## `config.php`
 ```php
-    return [
+    return [
         'sitename' => 'Hello World',
         'namespace' => '\\Endboss\\',
         'routes' => [
@@ -40,7 +40,7 @@ Higgs is a tiny package to help you with a small project that doesn't need a ful
                 'controller' => 'Page'
             ]
         ]
-    ];
+    ];
 ```
 
 ## `index.php`
@@ -48,7 +48,7 @@ Higgs is a tiny package to help you with a small project that doesn't need a ful
     require_once 'vendor/autoload.php';
 
     $application = new \RP\Higgs\Application();
-    $application->boot();
+    $application->boot();
 ```
 
 ## `PageController` (example)
@@ -62,7 +62,7 @@ Higgs is a tiny package to help you with a small project that doesn't need a ful
         public function indexAction()
         {
             $this->view->assign('helloWorld', 'Hello World');
-        }
+        }
 ```
 
 ## Why Higgs?

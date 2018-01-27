@@ -2,6 +2,26 @@
 
 Higgs is a tiny package to help you with a small project that doesn't need a full fledged framework like Larvel. It has a very basic routing without dynamic parts (yet). It also uses a templating engine called [Fluid]()
 
+## `composer.json`
+```JSON
+{
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://gitlab.com/runepiper/higgs"
+        }
+    ],
+    "require": {
+        "rp/higgs": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Endboss\\": "src/"
+        }
+    }
+}
+```
+
 ## Directory structure
 
     src (or classes or whatever)

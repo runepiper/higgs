@@ -1,6 +1,6 @@
 # Higgs
 
-Higgs is a tiny package to help you with a small project that doesn't need a full fledged framework like Larvel. It has a very basic routing without dynamic parts (yet). It also uses a templating engine called [Fluid]()
+Higgs is a tiny package to help you with a small project that doesn't need a full fledged framework like Larvel. It has a very basic routing without dynamic parts (yet). It also uses a templating engine called [Fluid](https://github.com/TYPO3/Fluid)
 
 ## `composer.json`
 ```JSON

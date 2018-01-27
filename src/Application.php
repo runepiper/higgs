@@ -20,7 +20,8 @@ class Application
     {
         $route = $this->resolveRoute();
 
-        $controller = $this->config['namespace'] . 'Controller\\' . ucfirst($route['controller']) . 'Controller';echo'<br>';
+        $controller = $this->config['namespace'] . 'Controller\\' . ucfirst($route['controller']) . 'Controller';
+        echo'<br>';
         $action = lcfirst($route['action']) . 'Action';
 
         if (class_exists($controller) && method_exists($controller, $action)) {

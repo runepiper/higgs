@@ -22,7 +22,8 @@ abstract class AbstractBaseController
      */
     protected $view;
 
-    public function __construct($arguments) {
+    public function __construct($arguments)
+    {
         $this->arguments = $arguments;
         $this->config = ConfigUtility::load();
         $this->initializeTemplateEngine();

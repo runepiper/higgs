@@ -7,7 +7,7 @@ class ConfigUtility
     /**
      * @return string
      */
-    static public function load(): array
+    public static function load(): array
     {
         $rootDir = substr($_SERVER['DOCUMENT_ROOT'], 0, -1) . str_replace('index.php', '', $_SERVER['PHP_SELF']);
         $config = ['rootdir' => $rootDir];

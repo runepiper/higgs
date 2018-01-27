@@ -1,0 +1,22 @@
+{
+    "name": "rp/higgs",
+    "description": "",
+    "homepage": "https://www.runepiper.de",
+    "authors": [
+        {
+            "name": "Rune Piper",
+            "email": "kontakt@runepiper.de",
+            "homepage": "https://www.runepiper.de"
+        }
+    ],
+    "require": {
+        "php": "~7",
+        "typo3fluid/fluid": "^2.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "RP\\Higgs\\": "src/"
+        }
+    },
+    "bin": ["bin/higgs"]
+}

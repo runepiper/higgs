@@ -1,0 +1,5 @@
+vendor
+*.sublime-project
+.DS_Store
+composer.lock
+.htaccess

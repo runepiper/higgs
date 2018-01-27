@@ -5,12 +5,6 @@ Higgs is a tiny package to help you with a small project that doesn't need a ful
 ## `composer.json`
 ```JSON
 {
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://gitlab.com/runepiper/higgs"
-        }
-    ],
     "require": {
         "rp/higgs": "dev-master"
     },

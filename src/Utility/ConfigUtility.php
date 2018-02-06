@@ -4,6 +4,8 @@ namespace RP\Higgs\Utility;
 
 class ConfigUtility
 {
+    use SingletonTrait;
+
     /**
      * @return string
      */

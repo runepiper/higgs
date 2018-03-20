@@ -3,6 +3,7 @@
 namespace RP\Higgs;
 
 use RP\Higgs\Utility\ConfigUtility;
+use RP\Higgs\Utility\RoutingUtility;
 
 class Application
 {
@@ -19,7 +20,6 @@ class Application
     public function boot()
     {
         $route = $this->resolveRoute();
-
         $controller = $this->config['namespace'] . 'Controller\\' . ucfirst($route['controller']) . 'Controller';
         $action = lcfirst($route['action']) . 'Action';
 
@@ -40,23 +40,10 @@ class Application
      */
     protected function resolveRoute(): array
     {
-        $route = [];
         $requestUrl = parse_url($_SERVER['REQUEST_URI'])['path'];
         $cwd = substr($_SERVER['CWD'], 0, -1);
+        $requestUrl = str_replace($cwd, '', $requestUrl);
 
-        foreach ($this->config['routes'] as $uri => $config) {
-            if (($cwd . $uri) === $requestUrl) {
-                $route = $config;
-                break;
-            }
-        }
-
-        if (empty($route)) {
-            http_response_code(404);
-            throw new \Exception('Couldn\'t resolve ' . $_SERVER['REQUEST_URI']);
-            die();
-        }
-
-        return $route;
+        return RoutingUtility::resolveRoute($requestUrl);
     }
 }

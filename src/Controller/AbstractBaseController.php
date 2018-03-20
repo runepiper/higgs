@@ -54,6 +54,8 @@ abstract class AbstractBaseController
 
     public function __destruct()
     {
-        echo $this->view->render();
+        if ($this->view !== null) {
+            echo $this->view->render();
+        }
     }
 }

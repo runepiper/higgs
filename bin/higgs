@@ -1,4 +1,36 @@
 #!/usr/bin/env php
 <?php
 
-echo 'rp/higgs' . "\n";
+// Create example config file
+if (!file_exists('config.php')) {
+    file_put_contents('config.php', trim("
+<?php
+
+return [
+    'sitename' => 'Hello World',
+    'namespace' => 'App\\\',
+    'routes' => [
+        '/' => [
+            'action' => 'index',
+            'controller' => 'Page'
+        ]
+    ]
+];
+    "));
+
+    echo 'Created config.php' . PHP_EOL;
+}
+
+// Create empty app directory
+if (!file_exists('app')) {
+    mkdir('app', 0755);
+
+    echo 'Created app/ directory' . PHP_EOL;
+}
+
+// Copy the example .htaccess file
+if (!file_exists('.htaccess')) {
+    copy('vendor/rp/higgs/_.htaccess', '.htaccess');
+
+    echo 'Created .htacces' . PHP_EOL;
+}

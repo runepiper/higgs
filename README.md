@@ -10,15 +10,19 @@ Higgs is a tiny package to help you with a small project that doesn't need a ful
     },
     "autoload": {
         "psr-4": {
-            "Endboss\\": "src/"
+            "App\\": "app/"
         }
     }
 }
 ```
 
-## Directory structure
+## Getting started
 
-    src (or classes or whatever)
+After you created a `composer.json` file and installed the dependencies you can execute `./vendor/bin/higgs` to set up an example `config.php`, `.htaccess` and create an empty `app/` directory for your controllers and so on.
+
+## Directory structure
+```
+    app
         Controller
             PageController
         Utility
@@ -38,23 +42,6 @@ Higgs is a tiny package to help you with a small project that doesn't need a ful
     config.php
     index.php
     composer.json
-
-## `config.php`
-```php
-return [
-    'sitename' => 'Hello World',
-    'namespace' => '\\Endboss\\',
-    'routes' => [
-        '/' => [
-            'action' => 'index',
-            'controller' => 'Page'
-        ],
-        '/contact' => [
-            'action' => 'contact',
-            'controller' => 'Page'
-        ]
-    ]
-];
 ```
 
 ## `index.php`
@@ -67,7 +54,7 @@ $application->boot();
 
 ## `PageController` (example)
 ```php
-namespace Endboss\Controller;
+namespace App\Controller;
 
 use RP\Higgs\Controller\AbstractBaseController;
 

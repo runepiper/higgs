@@ -2,6 +2,7 @@
     "name": "rp/higgs",
     "description": "A tiny MVC framework to help you with small projects that doesn't need a full fledged framework.",
     "homepage": "https://www.runepiper.de",
+    "license": "MIT",
     "authors": [
         {
             "name": "Rune Piper",

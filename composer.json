@@ -1,6 +1,6 @@
 {
     "name": "rp/higgs",
-    "description": "",
+    "description": "A tiny MVC framework to help you with small projects that doesn't need a full fledged framework.",
     "homepage": "https://www.runepiper.de",
     "authors": [
         {

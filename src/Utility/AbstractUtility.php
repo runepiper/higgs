@@ -2,7 +2,7 @@
 
 namespace RP\Higgs\Utility;
 
-trait SingletonTrait
+abstract class AbstractUtility
 {
     /**
      * @var self
@@ -17,7 +17,7 @@ trait SingletonTrait
     {
     }
 
-    public static function getInstance(): self
+    public static function getInstance(): AbstractUtility
     {
         if (self::$instance === null) {
             self::$instance = new self();

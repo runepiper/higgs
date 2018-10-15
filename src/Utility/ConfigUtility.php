@@ -2,12 +2,10 @@
 
 namespace RP\Higgs\Utility;
 
-class ConfigUtility
+class ConfigUtility extends AbstractUtility
 {
-    use SingletonTrait;
-
     /**
-     * @return string
+     * @return array
      */
     public static function load(): array
     {

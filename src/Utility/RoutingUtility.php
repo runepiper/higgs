@@ -6,10 +6,12 @@ namespace RP\Higgs\Utility;
  * This is just a very basic routing utility that finds a matching
  * configuration for a given route. @TODO: Add more detailed description
  */
-class RoutingUtility
+class RoutingUtility extends AbstractUtility
 {
-    use SingletonTrait;
-
+    /**
+     * @param string $uri
+     * @return array
+     */
     public static function resolveRoute(string $uri): array
     {
         $compiledRoutingData = self::compileRoutingData();
@@ -28,6 +30,9 @@ class RoutingUtility
         return $result;
     }
 
+    /**
+     * @return array
+     */
     protected static function compileRoutingData(): array
     {
         $regex = '~^(?|';

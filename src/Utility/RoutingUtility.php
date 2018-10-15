@@ -31,6 +31,9 @@ class RoutingUtility extends AbstractUtility
     }
 
     /**
+     * Compile the routing array saved in the config to a
+     * regex string that can be resolved much faster.
+     *
      * @return array
      */
     protected static function compileRoutingData(): array
@@ -45,7 +48,7 @@ class RoutingUtility extends AbstractUtility
         // @see https://medium.com/@nicolas.grekas/making-symfonys-router-77-7x-faster-1-2-958e3754f0e1
         foreach ($config['routes'] as $uri => $config) {
             $regex .= '(*MARK:route' . $i . ')';
-            $regex .= preg_replace('/{([A-Za-z]*?)}/', '(\d+)', $uri);
+            $regex .= $uri;
             $regex .= '|';
             $routeMap['route' . $i] = $config;
             $i++;

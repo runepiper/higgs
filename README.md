@@ -1,4 +1,5 @@
 [![Downloads](https://img.shields.io/packagist/dt/rp/higgs.svg)](https://packagist.org/packages/rp/higgs)
+[![License](https://img.shields.io/github/license/runepiper/higgs.svg)](https://github.com/runepiper/higgs/blob/master/LICENSE)
 
 # Higgs
 

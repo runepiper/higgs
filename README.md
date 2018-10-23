@@ -1,3 +1,5 @@
+[![Downloads](https://img.shields.io/packagist/dt/rp/higgs.svg)](https://packagist.org/packages/rp/higgs)
+
 # Higgs
 
 Higgs is a tiny framework to help you with small projects that doesn't need a full fledged framework like Laravel. It has a very basic routing without dynamic parts also know as slugs. It also uses a templating engine called [Fluid](https://github.com/TYPO3/Fluid). It is very powerful yet very universal and easy to learn, because of it's HTML style writing.
